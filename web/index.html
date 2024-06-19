@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Escape Room Software</title>
+    <style>
+        /* CSS-Styling für die Seite */
+        body {
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .success {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .success img {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .success p {
+            font-size: 24px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Escape Room Software</h1>
+        <input type="text" id="codeInput" placeholder="Code eingeben">
+        <button onclick="checkCode()">Überprüfen</button>
+        <div id="successMessage" class="success" style="display: none;">
+            <img src="https://i.giphy.com/lnlAifQdenMxW.webp" alt="Konfetti">
+            <p>Rätsel gelöst! 🎉✅</p>
+        </div>
+    </div>
+    <script>
+        // JavaScript-Code zum Überprüfen des Codes
+        function checkCode() {
+            var code = "1A34"; // Hier den gewünschten Code eingeben
+            var input = document.getElementById("codeInput").value;
+            
+            if (input === code) {
+                document.getElementById("successMessage").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
